@@ -1,3 +1,8 @@
+import {PLATFORM} from 'aurelia-pal';
+
 export function configure(config) {
-  //config.globalResources(['./todo-list', './todo-item']);
+  config.globalResources(
+    PLATFORM.moduleName('./todo-list'),
+    PLATFORM.moduleName('./todo-item')
+  );
 }
