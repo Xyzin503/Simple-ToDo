@@ -7,7 +7,7 @@ import {PLATFORM} from 'aurelia-pal';
 export function configure(aurelia) {
   aurelia.use
     .standardConfiguration()
-    //.feature(PLATFORM.moduleName('todo/index'))
+    .feature(PLATFORM.moduleName('todo/index'))
   ;
 
   aurelia.use.developmentLogging(environment.debug ? 'debug' : 'warn');
