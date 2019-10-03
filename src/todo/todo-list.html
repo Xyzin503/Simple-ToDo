@@ -1,0 +1,15 @@
+<template>
+  <form>
+    <label for="todo-text">Todo: </label>
+    <input id="todo-text" value.bind="newTodo" />
+    <button type="button" click.trigger="addTodo()">Add</button>
+  </form>
+  
+  <ul>
+    <li repeat.for="item of todos">
+      <input type="checkbox" checked.bind="item.done" />
+      <span css="text-decoration: ${item.done? 'line-through' : 'none'}">${item.text}</span>
+      <button type="button" click.trigger="removeTodo(item)">Remove</button>
+    </li>
+  </ul>
+</template>
